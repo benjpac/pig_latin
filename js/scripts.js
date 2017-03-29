@@ -17,6 +17,10 @@ function findVowelIndex(word) {
 }
 
 function convertPigLatin(word) {
+  // handle number
+  if (!isNaN(word)) {
+    return word;
+  }
   // consider qu case
   if (word.charAt(0) === "q" && word.charAt(1) === "u") {
     wordQu = word.slice(2);
